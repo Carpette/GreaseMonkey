@@ -30,7 +30,7 @@
 	{
 		console.log('addtexttodescription');
 
-		document.getElementsByTagName('textarea')[0].textContent = "Procédure utilisée (oui/non)\nsi oui, indiquer la référence\nsi non, indiquer la procédure créée (si récurrent) ou indiquer la démarche de résolution mise en place \n- Échange avec l’utilisateur (préciser le canal + la nature de l’échange) : (copier/coller le mail)\n- Test effectué : \n";
+		document.getElementsByTagName('textarea')[0].textContent = "- Procédure utilisée (indiquer la réf. utilisée ou créée ; sinon indiquer la démarche)\n- Échange avec l’utilisateur (canal + nature de l’échange - copier/coller le mail)\n- Test effectué :";
 		// on peut écrire
 		//text.textContent += "-          Procédure utilisée (oui/non)";
 	}
