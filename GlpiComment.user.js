@@ -31,16 +31,10 @@
 		console.log('addtexttodescription');
 
 		document.getElementsByTagName('textarea')[0].textContent = "- Procédure utilisée (indiquer la réf. utilisée ou créée ; sinon indiquer la démarche)\n- Échange avec l’utilisateur (canal + nature de l’échange - copier/coller le mail)\n- Test effectué :";
-		// on peut écrire
-		//text.textContent += "-          Procédure utilisée (oui/non)";
 	}
  
 	try
 	{
-		console.log("script lance");
-		// supprimer la disparition du cursor des tableaux:
-		//removeAttributeOfElement('style',"//tr");
-	
 		// on ajoute un nouveau bouton de suivi	
 		var onglet = document.getElementById('onglet');
 		if ( onglet == null )
@@ -52,7 +46,13 @@
 		var newComment = document.createElement('a');
 		newComment.href = '#';
 		newComment.textContent = 'Suivi pré-formaté';
-		
+		// on rajoute un onglet invisible au milieu pour respecter la présentation actuelle de GLPI
+		var linvisible	= document.createElement('li');
+		linvisible.className = 'invisible';
+		linvisible.textContent = '';
+		onglet.appendChild(linvisible);
+
+		// on rajoute maintenat notre nouvel onglet (but de ce script)
 		var li 		= document.createElement('li');
 		li.id 		= 'addfollowup';
 		showAddFollowup();
@@ -71,6 +71,7 @@
 		alert("UserScript exception:\n" + e);
 	}
  /*
+<li class="invisible">&nbsp;</li>
 <li id="addfollowup" onclick="showAddFollowup(); Effect.Appear('viewfollowup');">
 	<a href="#">Ajouter un nouveau suivi</a>
 </li>*/
