@@ -2,7 +2,9 @@
 // @name        GlpiComment
 // @namespace   QSixt
 // @include     http://glpi/glpi/plugins/CRRA/*
-// @version     1
+// @version     2.0
+// @updateURL	https://github.com/Carpette/GreaseMonkey/raw/master/GlpiComment.user.js
+// @downloadURL	https://github.com/Carpette/GreaseMonkey/raw/master/GlpiComment.user.js
 // @grant       none
 // ==/UserScript==
 
